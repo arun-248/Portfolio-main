@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function HandwritingAnimation({
-  name = "Hi, I’m Arun! Turning Data into Intelligent Solutions 🚀",
+  name = "Hi, I'm Arun! Turning Data into Intelligent Solutions 🚀",
   strokeWidth = 2,
   strokeColor = "#0ea5e9",
   fillColor = "#0ea5e9",
@@ -36,10 +36,12 @@ export function HandwritingAnimation({
     setTextLen(len);
 
     (async () => {
+      // Step 1 → Draw stroke
       await controls.start({
         strokeDashoffset: 0,
         transition: { duration: duration, ease: "easeInOut" },
       });
+      // Step 2 → Fill text and remove stroke
       await controls.start({
         fill: fillColor,
         strokeWidth: 0,
@@ -55,7 +57,7 @@ export function HandwritingAnimation({
       className={`w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900 ${className}`}
     >
       <svg
-        viewBox="0 0 1600 400"
+        viewBox="0 0 1600 600"
         preserveAspectRatio="xMidYMid meet"
         className="w-[95%] h-[95%] sm:w-[90%] sm:h-[90%]"
         role="img"
@@ -69,25 +71,22 @@ export function HandwritingAnimation({
           dominantBaseline="middle"
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
-          className="fill-transparent stroke-sky-500"
+          className="text-[120px] sm:text-[48px]" // 🔥 Mobile: 120px (4x larger), Desktop: 48px (original size)
           style={{
-            // Keep original desktop size
-            fontSize: "48px",
+            fill: "transparent",
+            stroke: strokeColor,
+            strokeWidth: strokeWidth,
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            paintOrder: "stroke",
+            strokeDasharray: dashArray,
           }}
           initial={{
             strokeDashoffset: dashArray,
           }}
           animate={controls}
         >
-          {/* Mobile: 2x larger, will wrap if needed */}
-          <tspan className="block sm:hidden" style={{ fontSize: "96px" }}>
-            {name}
-          </tspan>
-
-          {/* Desktop: same as before */}
-          <tspan className="hidden sm:block" style={{ fontSize: "48px" }}>
-            {name}
-          </tspan>
+          {name}
         </motion.text>
       </svg>
     </div>
