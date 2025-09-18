@@ -50,29 +50,30 @@ export function HandwritingAnimation({
     })();
   }, [controls, duration, name, fillColor]);
 
-  const dashArray = textLen ? textLen : 2000;
+  const dashArray = textLen || 2000;
 
   return (
     <div
       className={`w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900 ${className}`}
     >
       <svg
-        viewBox="0 0 1800 400"
+        viewBox="0 0 1600 400"
         preserveAspectRatio="xMidYMid meet"
-        className="w-[95%] h-[95%]"
+        className="w-[95%] h-[95%] sm:w-[90%] sm:h-[90%]"
         role="img"
         aria-label={`Handwritten text: ${name}`}
       >
         <motion.text
           ref={textRef}
-          x="52%" // horizontal center
-          y="50%" // vertical center
+          x="50%"
+          y="50%"
           textAnchor="middle"
           dominantBaseline="middle"
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            fontSize: "clamp(28px, 5vw, 66px)", // responsive sizing
+            // Desktop: previous size, Mobile: slightly larger
+            fontSize: "clamp(36px, 6vw, 60px)", // 36px min on mobile, grows to 6vw, max 60px on desktop
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,

@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { Link } from './Link';
 import { TypeWriter } from './ui/TypeWriter';
@@ -28,16 +27,17 @@ export function Hero() {
 
       <div className="container mx-auto px-10 py-16 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
           {/* Left Column - Content */}
           <div className="flex flex-col items-center justify-center text-center space-y-4 order-2 md:order-1">
             <div className="space-y-2">
               <div className="inline-block bg-blue-100 dark:bg-blue-900/50 backdrop-blur-sm text-blue-600 dark:text-blue-300 text-sm font-medium px-4 py-2 rounded-full">
                 Hey! <span className="inline-block origin-[70%_70%] animate-wave">👋</span> I'm
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
                 Arun Chinthalapally
               </h1>
-              <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+              <div className="text-xl sm:text-2xl md:text-2xl text-gray-600 dark:text-gray-300">
                 I'm a <TypeWriter words={roles} delay={100} />
               </div>
             </div>
@@ -47,22 +47,23 @@ export function Hero() {
             <SocialLinks />
           </div>
 
-          {/* Right Column - Profile Image */}
+          {/* Right Column - Profile Image + Responsive Balloons */}
           <div className="relative order-1 md:order-2">
-            <div className="absolute w-24 h-24 bg-blue-600 top-0 left-0 rounded-full animate-floating" />
-            <div className="absolute w-24 h-24 bg-purple-600 bottom-0 right-0 rounded-full animate-floating delay-150" />
-            <div className="absolute w-20 h-20 bg-green-500 top-4 right-4 rounded-full animate-floating delay-300" />
-            <div className="absolute w-20 h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
+            {/* Responsive floating balloons */}
+            <div className="absolute w-6 sm:w-10 md:w-24 h-6 sm:h-10 md:h-24 bg-blue-600 top-0 left-0 rounded-full animate-floating" />
+            <div className="absolute w-6 sm:w-10 md:w-24 h-6 sm:h-10 md:h-24 bg-purple-600 bottom-0 right-0 rounded-full animate-floating delay-150" />
+            <div className="absolute w-5 sm:w-8 md:w-20 h-5 sm:h-8 md:h-20 bg-green-500 top-4 right-4 rounded-full animate-floating delay-300" />
+            <div className="absolute w-5 sm:w-8 md:w-20 h-5 sm:h-8 md:h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
 
+            {/* Profile image */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-  src="/assets/arun_photo.jpeg"
-  alt="Arun Chinthalapally"
-  className="relative w-40 sm:w-52 md:w-64 lg:w-80 mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
-/>
-
-
+              src="/assets/arun_photo.jpeg"
+              alt="Arun Chinthalapally"
+              className="relative w-40 sm:w-52 md:w-64 lg:w-80 mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
           </div>
+
         </div>
 
         {/* Scroll Indicator */}
@@ -78,5 +79,3 @@ export function Hero() {
     </section>
   );
 }
-
-
