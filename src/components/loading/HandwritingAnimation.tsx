@@ -36,12 +36,10 @@ export function HandwritingAnimation({
     setTextLen(len);
 
     (async () => {
-      // Step 1 → Draw stroke
       await controls.start({
         strokeDashoffset: 0,
         transition: { duration: duration, ease: "easeInOut" },
       });
-      // Step 2 → Fill text and remove stroke
       await controls.start({
         fill: fillColor,
         strokeWidth: 0,
@@ -57,7 +55,7 @@ export function HandwritingAnimation({
       className={`w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900 ${className}`}
     >
       <svg
-        viewBox="0 0 1600 600"
+        viewBox="0 0 1600 400"
         preserveAspectRatio="xMidYMid meet"
         className="w-[95%] h-[95%] sm:w-[90%] sm:h-[90%]"
         role="img"
@@ -71,22 +69,25 @@ export function HandwritingAnimation({
           dominantBaseline="middle"
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
+          className="fill-transparent stroke-sky-500"
           style={{
-            fontSize: "clamp(32px, 10vw, 60px)", // ✅ Bigger on mobile (~2x), same on desktop
-            fill: "transparent",
-            stroke: strokeColor,
-            strokeWidth: strokeWidth,
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            paintOrder: "stroke",
-            strokeDasharray: dashArray,
+            // Keep original desktop size
+            fontSize: "48px",
           }}
           initial={{
             strokeDashoffset: dashArray,
           }}
           animate={controls}
         >
-          {name}
+          {/* Mobile: 2x larger, will wrap if needed */}
+          <tspan className="block sm:hidden" style={{ fontSize: "96px" }}>
+            {name}
+          </tspan>
+
+          {/* Desktop: same as before */}
+          <tspan className="hidden sm:block" style={{ fontSize: "48px" }}>
+            {name}
+          </tspan>
         </motion.text>
       </svg>
     </div>
