@@ -20,7 +20,19 @@ export function HandwritingAnimation({
 }: Props) {
   const textRef = useRef<SVGTextElement | null>(null);
   const [textLen, setTextLen] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const controls = useAnimation();
+
+  useEffect(() => {
+    // Check if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const el = textRef.current;
@@ -48,9 +60,16 @@ export function HandwritingAnimation({
         transition: { duration: 0.6, ease: "easeInOut" },
       });
     })();
-  }, [controls, duration, name, fillColor]);
+  }, [controls, duration, name, fillColor, isMobile]);
 
   const dashArray = textLen || 2000;
+
+  // Split text for mobile (3 lines)
+  const mobileLines = [
+    "Hi, I'm Arun! Turning Data",
+    "into Intelligent",
+    "Solutions 🚀"
+  ];
 
   return (
     <div
@@ -66,13 +85,13 @@ export function HandwritingAnimation({
         <motion.text
           ref={textRef}
           x="50%"
-          y="50%"
+          y={isMobile ? "40%" : "50%"} // Adjust position for mobile
           textAnchor="middle"
           dominantBaseline="middle"
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
-          className="text-[120px] sm:text-[48px]" // 🔥 Mobile: 120px (4x larger), Desktop: 48px (original size)
           style={{
+            fontSize: isMobile ? "48px" : "60px", // 4x larger on mobile, original on desktop
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,
@@ -86,7 +105,17 @@ export function HandwritingAnimation({
           }}
           animate={controls}
         >
-          {name}
+          {isMobile ? (
+            // Mobile: Multiple lines
+            <>
+              <tspan x="50%" dy="0">{mobileLines[0]}</tspan>
+              <tspan x="50%" dy="1.2em">{mobileLines[1]}</tspan>
+              <tspan x="50%" dy="1.2em">{mobileLines[2]}</tspan>
+            </>
+          ) : (
+            // Desktop: Single line (original)
+            name
+          )}
         </motion.text>
       </svg>
     </div>
