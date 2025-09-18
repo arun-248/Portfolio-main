@@ -58,8 +58,9 @@ export function Hero() {
             <img
   src="/assets/arun_photo.jpeg"
   alt="Arun Chinthalapally"
-  className="relative w-64 md:w-80 lg:w-96 mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
+  className="relative w-40 sm:w-52 md:w-64 lg:w-80 mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
 />
+
 
           </div>
         </div>
