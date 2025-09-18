@@ -91,7 +91,7 @@ export function HandwritingAnimation({
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            fontSize: isMobile ? "80px" : "60px", // Much bigger on mobile, original on desktop
+            fontSize: isMobile ? "240px" : "60px", // 4x bigger on mobile (240px), original on desktop
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,
