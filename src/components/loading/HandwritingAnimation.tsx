@@ -24,7 +24,6 @@ export function HandwritingAnimation({
   const controls = useAnimation();
 
   useEffect(() => {
-    // Check if mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640); // sm breakpoint
     };
@@ -38,6 +37,7 @@ export function HandwritingAnimation({
     const el = textRef.current;
     if (!el) return;
 
+    // Recalculate text length on name/mobile change
     let len = 0;
     try {
       len = el.getComputedTextLength();
@@ -48,12 +48,11 @@ export function HandwritingAnimation({
     setTextLen(len);
 
     (async () => {
-      // Step 1 → Draw stroke
+      // Animate the drawing and filling effect
       await controls.start({
         strokeDashoffset: 0,
         transition: { duration: duration, ease: "easeInOut" },
       });
-      // Step 2 → Fill text and remove stroke
       await controls.start({
         fill: fillColor,
         strokeWidth: 0,
@@ -62,9 +61,10 @@ export function HandwritingAnimation({
     })();
   }, [controls, duration, name, fillColor, isMobile]);
 
+  // Adjust strokeDasharray dynamically
   const dashArray = textLen || 2000;
 
-  // Split text for mobile (3 lines)
+  // Split text for mobile
   const mobileLines = [
     "Hi, I'm Arun! Turning Data",
     "into Intelligent",
@@ -80,18 +80,18 @@ export function HandwritingAnimation({
         preserveAspectRatio="xMidYMid meet"
         className="w-[95%] h-[95%] sm:w-[90%] sm:h-[90%]"
         role="img"
-        aria-label={`Handwritten text: ${name}`}
+        aria-label={`Handwritten text: ${isMobile ? mobileLines.join(' ') : name}`}
       >
         <motion.text
           ref={textRef}
           x="50%"
-          y={isMobile ? "40%" : "50%"} // Adjust position for mobile
+          y={isMobile ? "40%" : "50%"}
           textAnchor="middle"
           dominantBaseline="middle"
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            fontSize: isMobile ? "100px" : "60px", // Mobile: 100px, Desktop: 60px
+            fontSize: isMobile ? "100px" : "60px",
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,
@@ -106,14 +106,12 @@ export function HandwritingAnimation({
           animate={controls}
         >
           {isMobile ? (
-            // Mobile: Multiple lines with 100px font
             <>
-              <tspan x="50%" dy="0">{mobileLines[0]}</tspan>
+              <tspan x="50%" dy="0em">{mobileLines[0]}</tspan>
               <tspan x="50%" dy="1.2em">{mobileLines[1]}</tspan>
               <tspan x="50%" dy="1.2em">{mobileLines[2]}</tspan>
             </>
           ) : (
-            // Desktop: Single line with 60px font (unchanged)
             name
           )}
         </motion.text>
