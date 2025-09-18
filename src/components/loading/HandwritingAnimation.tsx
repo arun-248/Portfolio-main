@@ -57,7 +57,7 @@ export function HandwritingAnimation({
       className={`w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900 ${className}`}
     >
       <svg
-        viewBox="0 0 1600 400"
+        viewBox="0 0 1600 600"
         preserveAspectRatio="xMidYMid meet"
         className="w-[95%] h-[95%] sm:w-[90%] sm:h-[90%]"
         role="img"
@@ -72,8 +72,7 @@ export function HandwritingAnimation({
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            // Desktop → keep same, Mobile → 2x larger
-            fontSize: "clamp(36px, 4vw, 60px)", 
+            fontSize: "clamp(32px, 10vw, 60px)", // ✅ Bigger on mobile (~2x), same on desktop
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,
