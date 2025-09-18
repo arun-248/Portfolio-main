@@ -91,7 +91,7 @@ export function HandwritingAnimation({
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            fontSize: isMobile ? "240px" : "60px", // 4x bigger on mobile (240px), original on desktop
+            fontSize: isMobile ? "100px" : "60px", // Mobile: 100px, Desktop: 60px
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,
@@ -106,14 +106,14 @@ export function HandwritingAnimation({
           animate={controls}
         >
           {isMobile ? (
-            // Mobile: Multiple lines
+            // Mobile: Multiple lines with 100px font
             <>
               <tspan x="50%" dy="0">{mobileLines[0]}</tspan>
               <tspan x="50%" dy="1.2em">{mobileLines[1]}</tspan>
               <tspan x="50%" dy="1.2em">{mobileLines[2]}</tspan>
             </>
           ) : (
-            // Desktop: Single line (original)
+            // Desktop: Single line with 60px font (unchanged)
             name
           )}
         </motion.text>
