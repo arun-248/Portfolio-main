@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
@@ -102,6 +102,16 @@ const groups = {
         "https://drive.google.com/file/d/1a61naEHu9-RHVs_LziS8-uPpI8mvgIxx/view?usp=sharing",
     },
     {
+      title: "JavaScript Essentials",
+      issuer: "NxtWave",
+      date: "Sept 2024",
+      image: "/assets/NXTWAVE_JS.jpg",
+      verifyLink:
+        "https://certificates.ccbp.in/academy/javascript-essentials?id=BXZFVEBSSD",
+      certLink:
+        "https://drive.google.com/file/d/1xh9h1dsTjpQ9pnx7wqWk3marpURH3JNW/view?usp=sharing",
+    },
+    {
       title: "Node.js",
       issuer: "NxtWave",
       date: "April 2025",
@@ -111,14 +121,24 @@ const groups = {
         "https://drive.google.com/file/d/1nIXH3STXP1rAL-2oygLOMcW_rmZb4TAx/view?usp=sharing",
     },
     {
-      title: "JavaScript Essentials",
+      title: "Build Your Own Dynamic Web Application",
       issuer: "NxtWave",
-      date: "Sept 2024",
-      image: "/assets/NXTWAVE_JS.jpg",
+      date: "2025",
+      image: "/assets/NXTWAVE_DYNAMIC_WEB.jpg",
       verifyLink:
-        "https://certificates.ccbp.in/academy/javascript-essentials?id=BXZFVEBSSD",
+        "https://certificates.ccbp.in/academy/dynamic-web-application?id=ALFXWPLGXS",
       certLink:
-        "https://drive.google.com/file/d/1xh9h1dsTjpQ9pnx7wqWk3marpURH3JNW/view?usp=sharing",
+        "https://drive.google.com/file/d/1rqic0t7en1DvTJ2NHf3iIAQhDewuUr97/view?usp=sharing",
+    },
+    {
+      title: "Responsive Web Design using Flexbox",
+      issuer: "NxtWave",
+      date: "2023",
+      image: "/assets/NXTWAVE_FLEXBOX.jpg",
+      verifyLink:
+        "https://certificates.ccbp.in/academy/responsive-web-design-using-flexbox?id=JGDAPDZVWZ",
+      certLink:
+        "https://drive.google.com/file/d/1VW1RoUyLrQOYVvjpR5NAyhiDgv8n0SeU/view?usp=sharing",
     },
     {
       title: "Responsive Website",
@@ -260,11 +280,12 @@ const groups = {
 };
 
 export function Certifications() {
+  const [showMoreNxtWave, setShowMoreNxtWave] = useState(false);
+
   const sliderSettings = {
     dots: true,
     arrows: true,
     infinite: false,
-    centerMode: false,
     speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -295,15 +316,34 @@ export function Certifications() {
 
           {/* NxtWave */}
           <h3 className="text-2xl font-bold text-cyan-500 mb-6">NxtWave</h3>
-          <Slider {...sliderSettings} className="mb-12">
-            {groups.nxtwave.map((c) => (
-              <div key={c.title} className="px-4">
-                <CertificationCard {...c} />
-              </div>
+          {/* First 6 certificates visible */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            {groups.nxtwave.slice(0, 6).map((c) => (
+              <CertificationCard key={c.title} {...c} />
             ))}
-          </Slider>
+          </div>
 
-          {/* Tata (grid, not slider) */}
+          {/* Remaining certificates hidden initially */}
+          {showMoreNxtWave && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+              {groups.nxtwave.slice(6).map((c) => (
+                <CertificationCard key={c.title} {...c} />
+              ))}
+            </div>
+          )}
+
+          {!showMoreNxtWave && (
+            <div className="text-center mb-12">
+              <button
+                onClick={() => setShowMoreNxtWave(true)}
+                className="px-6 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
+              >
+                Show More
+              </button>
+            </div>
+          )}
+
+          {/* Tata */}
           <h3 className="text-2xl font-bold text-cyan-500 mb-6">Tata</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {groups.tata.map((c) => (
@@ -311,7 +351,7 @@ export function Certifications() {
             ))}
           </div>
 
-          {/* BCGX (grid, not slider) */}
+          {/* BCGX */}
           <h3 className="text-2xl font-bold text-cyan-500 mb-6">BCGX</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {groups.bcgx.map((c) => (
@@ -330,8 +370,8 @@ export function Certifications() {
           {/* Workshops */}
           <h3 className="text-2xl font-bold text-cyan-500 mb-6">Workshops</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {groups.workshops.map((ws) => (
-              <CertificationCard key={ws.title} {...ws} />
+            {groups.workshops.map((c) => (
+              <CertificationCard key={c.title} {...c} />
             ))}
           </div>
         </div>
