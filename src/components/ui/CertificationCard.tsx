@@ -19,12 +19,12 @@ export function CertificationCard({
 }: Props) {
   return (
     <div className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-      {/* Certificate Image (dynamic width, no side gaps) */}
-      <div className="w-full flex justify-center bg-white">
+      {/* Certificate Image - Best fix for your issue */}
+      <div className="w-full flex justify-center items-center bg-gray-50" style={{ minHeight: "250px", maxHeight: "350px" }}>
         <img
           src={image}
           alt={title}
-          className="max-h-64 w-auto object-contain"
+          className="h-full w-auto object-contain"
         />
       </div>
 
