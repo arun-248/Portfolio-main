@@ -7,14 +7,10 @@ import {
   SiScikitlearn,
   SiPandas,
   SiNumpy,
-  SiPowers,
   SiJupyter,
   SiGooglecolab,
   SiTensorflow,
   SiPytorch,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
   SiReact,
   SiNodedotjs,
   SiExpress,
@@ -25,6 +21,7 @@ import {
   SiTailwindcss,
   SiVercel,
   SiGithub,
+  SiJavascript,
 } from 'react-icons/si';
 import { FaChartBar, FaProjectDiagram, FaRobot } from 'react-icons/fa';
 
@@ -41,9 +38,6 @@ const techStacks = {
   colab: { icon: SiGooglecolab, name: 'Google Colab', color: '#F9AB00' },
   tensorflow: { icon: SiTensorflow, name: 'TensorFlow', color: '#FF6F00' },
   pytorch: { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
-  html: { icon: SiHtml5, name: 'HTML', color: '#E34F26' },
-  css: { icon: SiCss3, name: 'CSS', color: '#1572B6' },
-  js: { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
   react: { icon: SiReact, name: 'React.js', color: '#61DAFB' },
   node: { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
   express: { icon: SiExpress, name: 'Express.js', color: '#000000' },
@@ -57,7 +51,7 @@ const techStacks = {
   github: { icon: SiGithub, name: 'GitHub', color: '#181717' },
 };
 
-// Define projects
+// Define projects in correct order
 const projects = [
   {
     title: 'Personalized Book Recommender',
@@ -65,8 +59,7 @@ const projects = [
 Analyzed user-book interactions using Python and Scikit-learn. 
 Engineered a system that processes large datasets efficiently. 
 Created a full-stack web app with Streamlit. 
-Focused on generating accurate and relevant recommendations. 
-Demonstrates end-to-end development skills.`,
+Focused on generating accurate and highly relevant recommendations. Demonstrates comprehensive end-to-end development skills effectively and efficiently.`,
     image: '/assets/book.jpg',
     link: 'https://arunpersonalizedbookrecommender.streamlit.app/',
     github: 'https://github.com/arun-248/Personalized-Book-Recommender.git',
@@ -80,22 +73,33 @@ Demonstrates end-to-end development skills.`,
     ],
   },
   {
-    title: 'Stock Trend Analyzer',
-    description: `Built an AI-powered analyzer for financial news using semantic search. 
-Implemented document chunking, vector embeddings, and FAISS similarity search. 
-Integrated with an LLM to answer queries contextually. 
-Simulates an equity research assistant for investors. 
-Designed for efficient retrieval of relevant financial information. 
-Provides actionable insights using advanced AI techniques for decision-making..`,
-    image: '/assets/stock.jpg',
-    link: '#',
-    github: 'https://github.com/arun-248/Stock-Trend-Analyzer',
+    title: 'Lung Cancer Risk Analyzer',
+    description: `This ML-powered application predicts personalized lung cancer risk using an ensemble of Logistic Regression and Random Forest, achieving 94.2% accuracy with a 0.987 AUC-ROC. It provides real-time risk classification with confidence scoring through an interactive Streamlit dashboard, emphasizing feature importance and transparent communication for early intervention.`,
+    image: '/assets/cancerimage.jpg',
+    link: 'https://arun24-lung-cancer-analyzer.streamlit.app/',
+    github: 'https://github.com/arun-248/lung-cancer-risk-analyzer.git',
     techStack: [
       techStacks.python,
-      techStacks.tensorflow,
-      techStacks.pytorch,
-      techStacks.jupyter,
-      techStacks.pandas
+      techStacks.scikit,
+      techStacks.streamlit,
+      techStacks.pandas,
+      techStacks.numpy,
+      techStacks.jupyter
+    ],
+  },
+  {
+    title: 'Agentic-RAG-Chatbot-MCP',
+    description: `Built an agent-based Retrieval-Augmented Generation (RAG) chatbot to answer contextual questions from diverse documents. Implemented a three-agent architecture (Ingestion, Retrieval, Response) and the Model Context Protocol (MCP) for structured communication. Used vector embeddings for efficient semantic retrieval and built a UI for upload, multi-turn Q&A, and source context viewing.`,
+    image: '/assets/Agentic_RAG_Chatbot.jpg',
+    link: 'https://arun24ragchatbot.streamlit.app/',
+    github: 'https://github.com/arun-248/Agentic-RAG-Chatbot-MCP.git',
+    techStack: [
+      techStacks.python,
+      techStacks.gpt,
+      techStacks.streamlit,
+      { icon: FaProjectDiagram, name: 'FAISS', color: '#009688' },         // Added FAISS
+    { icon: SiPython, name: 'HuggingFace Embeddings', color: '#FFAE00' }, // Added Embeddings
+    { icon: SiNodedotjs, name: 'MCP Protocol', color: '#6D28D9' }, 
     ],
   },
   {
@@ -120,12 +124,10 @@ Focused on accuracy and usability in live conditions.`,
   },
   {
     title: 'Heart Disease Prediction',
-    description: `Developed a Logistic Regression model to predict the presence of heart disease. Conducted data analysis and preprocessing to ensure data quality,reliability and accuracy. 
+    description: `Developed a Logistic Regression model to predict the presence of heart disease. Conducted data analysis and preprocessing to ensure data quality, reliability and accuracy. 
 Trained and tested the model for optimal accuracy. 
-Evaluated predictive capabilities using performance metrics. 
-Showcases end-to-end ML workflow for healthcare applications.`,
+Evaluated predictive capabilities using diverse performance metrics thoroughly. Showcases a comprehensive end-to-end ML workflow for critical healthcare applications.`,
     image: '/assets/heart_2.jpg',
-    link: '#',
     github: 'https://github.com/arun-248/Heart-Disease-Prediction.git',
     techStack: [
       techStacks.python,
@@ -136,6 +138,22 @@ Showcases end-to-end ML workflow for healthcare applications.`,
     ],
   },
   {
+    title: 'Stock Trend Analyzer',
+    description: `Built an AI-powered analyzer for financial news using semantic search. 
+Implemented document chunking, vector embeddings, and FAISS similarity search. 
+Integrated with an LLM to answer queries contextually. 
+Simulates an equity research assistant. Designed for efficient retrieval of financial information. Provides actionable insights using advanced AI techniques for decision-making.`,
+    image: '/assets/stock.jpg',
+    github: 'https://github.com/arun-248/Stock-Trend-Analyzer',
+    techStack: [
+      techStacks.python,
+      techStacks.tensorflow,
+      techStacks.pytorch,
+      techStacks.jupyter,
+      techStacks.pandas
+    ],
+  },
+  {
     title: 'HR Analytics Dashboard',
     description: `Developed an interactive HR Analytics Dashboard using Power BI. 
 Analyzed employee data comprehensively to accurately identify trends and insights. 
@@ -143,7 +161,6 @@ Implemented visualizations for attrition, performance, and recruitment metrics.
 Enabled data-driven decision making for HR managers. 
 Focused on clarity, usability, and meaningful actionable insights.`,
     image: '/assets/hr.jpg',
-    link: '#',
     github: 'https://github.com/arun-248/HR-Analytics-Dashboard.git',
     techStack: [
       techStacks.powerbi,
@@ -162,31 +179,14 @@ Converts text back to speech for natural interaction.
 Automates tasks like opening Google or YouTube. 
 Demonstrates integration of AI, NLP, and automation.`,
     image: '/assets/gpt.jpg',
-    link: '#',
     github: 'https://github.com/arun-248/GPT-Based-Smart-Assistant.git',
     techStack: [
       techStacks.python,
       techStacks.gpt,
-      techStacks.jupyter
-    ],
-  },
-  {
-    title: 'Zomato Exploratory Data Analysis',
-    description: `Performed in-depth Exploratory Data Analysis (EDA) on Zomato restaurant dataset. 
-Cleaned and preprocessed data, handled missing values, and removed irrelevant columns. 
-Renamed features for better clarity. 
-Visualized restaurant distribution by category and cuisine. 
-Analyzed rating vs. cost relationships. 
-Derived insights to understand trends in the restaurant industry.`,
-    image: '/assets/zomato.jpg',
-    link: '#',
-    github: 'https://github.com/arun-248/Exploratory-Data-Analysis-Zomato.git',
-    techStack: [
-      techStacks.python,
-      techStacks.pandas,
-      techStacks.numpy,
-      techStacks.seaborn,
-      techStacks.jupyter
+      techStacks.jupyter,
+      { icon: FaRobot, name: 'Speech Recognition', color: '#E63946' },  // Added STT
+    { icon: FaRobot, name: 'pyttsx3 (TTS)', color: '#1D3557' },       // Added TTS
+    { icon: SiJavascript, name: 'Web Automation', color: '#F7DF1E' },
     ],
   },
   {
@@ -194,9 +194,7 @@ Derived insights to understand trends in the restaurant industry.`,
     description: `Designed and developed a personal portfolio to showcase AI, ML, and Data Analytics projects. 
 Implemented a modern, responsive design using React, TypeScript, and Tailwind CSS. 
 Integrated interactive animations with Framer Motion. 
-Highlighted professional experience, skills, certifications, and projects. 
-Deployed on Vercel for fast, reliable performance. 
-Demonstrates front-end development expertise and professional presentation.`,
+Highlighted professional experience, certifications, and projects. Deployed on Vercel for fast, reliable performance. Demonstrates front-end expertise and professional presentation.`,
     image: '/assets/portfolio.png',
     link: 'https://arun248-portfolio.vercel.app/',
     github: 'https://github.com/arun-248/Portfolio-main.git',

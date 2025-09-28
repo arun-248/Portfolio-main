@@ -27,6 +27,7 @@ Delivered a structured report, presentation, and demo video to showcase methodol
       "Pipeline Deployment",
       "Business Insights"
     ],
+    certificate: "https://drive.google.com/file/d/17nfZYBeobDR6z2PwGLp7A4khJHEQ2GnR/view?usp=sharing",
   },
 ];
 

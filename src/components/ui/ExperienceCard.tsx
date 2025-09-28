@@ -1,13 +1,11 @@
-import React from "react";
-import { Briefcase } from "lucide-react";
-
-interface ExperienceCardProps {
+type ExperienceProps = {
   title: string;
   company: string;
   period: string;
   description: string;
   skills: string[];
-}
+  certificate?: string;
+};
 
 export function ExperienceCard({
   title,
@@ -15,51 +13,45 @@ export function ExperienceCard({
   period,
   description,
   skills,
-}: ExperienceCardProps) {
+  certificate,
+}: ExperienceProps) {
   return (
-    <div className="relative group pl-6 sm:pl-10">
-      {/* Timeline Dot */}
-      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
+    <div className="pl-6 relative">
+      {/* Timeline dot */}
+      <div className="absolute -left-3 top-2 w-5 h-5 bg-blue-600 dark:bg-blue-500 rounded-full border-2 border-white"></div>
 
-      {/* Experience Card */}
-      <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
-        
-        <div className="relative z-10">
-          {/* Header */}
-          <div className="flex items-center gap-4">
-            <div className="p-3 sm:p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
-              <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
-              <p className="text-base text-blue-600 dark:text-blue-400">{company}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{period}</p>
-            </div>
-          </div>
+      {/* Experience content */}
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{company}</p>
+      <p className="text-sm text-gray-500">{period}</p>
 
-          {/* Description (Custom Blue Bullets) */}
-          <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
-            {description.split("\n").map((line, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">•</span>
-                <span>{line}</span>
-              </li>
-            ))}
-          </ul>
+      <p className="mt-3 text-gray-700 dark:text-gray-200 whitespace-pre-line">
+        {description}
+      </p>
 
-          {/* Skills */}
-          <div className="mt-4 flex flex-wrap gap-2">
-            {skills.map((skill, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 text-sm font-medium bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+      {/* Skills */}
+      <div className="mt-3 flex flex-wrap gap-2">
+        {skills.map((skill, idx) => (
+          <span
+            key={idx}
+            className="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 rounded-full text-sm"
+          >
+            {skill}
+          </span>
+        ))}
       </div>
+
+      {/* Certificate link */}
+      {certificate && (
+        <a
+          href={certificate}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+        >
+          View Certificate
+        </a>
+      )}
     </div>
   );
 }

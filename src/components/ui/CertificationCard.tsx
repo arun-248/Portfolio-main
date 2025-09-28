@@ -19,11 +19,11 @@ export function CertificationCard({
 }: Props) {
   return (
     <div className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-      {/* Full image, no padding */}
+      {/* Full image, no cropping */}
       <img
         src={image}
         alt={title}
-        className="w-full h-64 object-cover"
+        className="w-full h-64 object-contain bg-white"
       />
 
       {/* Hover overlay */}
