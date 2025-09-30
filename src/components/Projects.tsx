@@ -88,8 +88,26 @@ Focused on generating accurate and highly relevant recommendations. Demonstrates
     ],
   },
   {
+    title: 'IPL Victory Probability Estimator',
+    description: `Developed a machine learning pipeline to forecast live IPL match win probabilities. 
+Extracted predictive features from historical and in-game data. 
+Trained a classification model for dynamic probability updates. 
+Implemented an interactive Streamlit web application. Provided real-time predictive insights for users during matches. Focused on accuracy and usability in dynamic live conditions.`,
+    image: '/assets/ipl.jpg',
+    link: 'https://iplwinpredictorbyarun.streamlit.app/',
+    github: 'https://github.com/arun-248/ipl-win-probability-app.git',
+    techStack: [
+      techStacks.python,
+      techStacks.scikit,
+      techStacks.streamlit,
+      techStacks.pandas,
+      techStacks.numpy,
+      techStacks.jupyter
+    ],
+  },
+  {
     title: 'Agentic-RAG-Chatbot-MCP',
-    description: `Built an agent-based Retrieval-Augmented Generation (RAG) chatbot to answer contextual questions from diverse documents. Implemented a three-agent architecture (Ingestion, Retrieval, Response) and the Model Context Protocol (MCP) for structured communication. Used vector embeddings for efficient semantic retrieval and built a UI for upload, multi-turn Q&A, and source context viewing.`,
+    description: `Built an agent-based Retrieval-Augmented Generation (RAG) chatbot to answer contextual questions from diverse documents. Implemented a three-agent architecture (Ingestion, Retrieval, Response) and the MCP for structured communication. Used vector embeddings for efficient semantic retrieval and built a UI for upload, multi-turn Q&A, and source context viewing.`,
     image: '/assets/Agentic_RAG_Chatbot.jpg',
     link: 'https://arun24ragchatbot.streamlit.app/',
     github: 'https://github.com/arun-248/Agentic-RAG-Chatbot-MCP.git',
@@ -102,26 +120,7 @@ Focused on generating accurate and highly relevant recommendations. Demonstrates
     { icon: SiNodedotjs, name: 'MCP Protocol', color: '#6D28D9' }, 
     ],
   },
-  {
-    title: 'IPL Victory Probability Estimator',
-    description: `Developed a machine learning pipeline to forecast live IPL match win probabilities. 
-Extracted predictive features from historical and in-game data. 
-Trained a classification model for dynamic probability updates. 
-Implemented an interactive Streamlit web application. 
-Provided real-time insights for users during matches. 
-Focused on accuracy and usability in live conditions.`,
-    image: '/assets/ipl.jpg',
-    link: 'https://iplvictoryestimatorbyarun.streamlit.app/',
-    github: 'https://github.com/arun-248/ipl-victory-prediction-system.git',
-    techStack: [
-      techStacks.python,
-      techStacks.scikit,
-      techStacks.streamlit,
-      techStacks.pandas,
-      techStacks.numpy,
-      techStacks.jupyter
-    ],
-  },
+  
   {
     title: 'Heart Disease Prediction',
     description: `Developed a Logistic Regression model to predict the presence of heart disease. Conducted data analysis and preprocessing to ensure data quality, reliability and accuracy. 

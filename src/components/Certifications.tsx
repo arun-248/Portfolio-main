@@ -229,6 +229,14 @@ const groups = {
 
   workshops: [
     {
+      title: "Generative AI Mastery Workshop (Buildathon)",
+      issuer: "NxtWave",
+      date: "Sept 2025",
+      image: "/assets/NXTWAVE_WS_GEN_AI_BUILDATHON.jpg",
+      verifyLink:
+        "https://openai-buildathon.nxtwave.tech/certificate?cid=S5ZB0XUKNU",
+    },
+    {
       title: "Model Context Protocol Mega Workshop",
       issuer: "NxtWave",
       date: "Aug 2025",
@@ -236,14 +244,7 @@ const groups = {
       verifyLink:
         "https://cdn1.ccbp.in/misc/workshop-acad-mcp-mega-workshop-completion/W7E8FREEBX.png",
     },
-    {
-      title: "Generative AI Mastery Workshop (Buildathon)",
-      issuer: "NxtWave",
-      date: "Aug 2025",
-      image: "/assets/NXTWAVE_WS_GEN_AI_BUILDATHON.jpg",
-      verifyLink:
-        "https://cdn1.ccbp.in/misc/workshop-openai-nxtwave-buildathon-genai-online-workshop-participation/XJRRQX8Z3O.png",
-    },
+    
     {
       title: "Data Analytics Mega Workshop",
       issuer: "NxtWave",
