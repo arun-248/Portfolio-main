@@ -1,4 +1,4 @@
-# 🚀 Arun Chinthalapally - Data Scientist & AI/ML Portfolio
+# 🚀 Arun Chinthalapally - Data Scientist & AI/ML Enthusiast
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 
 **🎯 A modern, interactive portfolio showcasing AI/ML expertise and data science projects**
 
-[**🌐 View Live Portfolio**](https://arun248-portfolio.vercel.app) | [**📧 Email**](mailto:arunchinthalapally248@gmail.com) | [**💼 LinkedIn**](https://linkedin.com/in/arun-chinthalapally) | [**💻 GitHub**](https://github.com/arun-248)
+[**🌐 View Live Portfolio**](https://arun248-portfolio.vercel.app)
 
 </div>
 
@@ -81,38 +81,6 @@
 
 ---
 
-## 💡 Skills & Expertise
-
-### 🐍 **Programming & Analysis**
-- Python
-- R
-- SQL
-- JavaScript
-
-### 🤖 **Machine Learning & AI**
-- **Frameworks**: TensorFlow, PyTorch, Scikit-learn, Keras
-- **Specializations**: NLP, Computer Vision, LLMs, Deep Learning
-- **Techniques**: CNN, RNN, LSTM, Transformers, YOLO, Faster R-CNN
-- **Advanced**: RAG (Retrieval-Augmented Generation), Fine-tuning, Transfer Learning
-
-### 📊 **Data Visualization & BI**
-- **Python Libraries**: Matplotlib, Seaborn, Plotly, Pandas
-- **BI Tools**: Power BI, Tableau
-- **Dashboard Development**: Interactive visualizations, Real-time analytics
-
-### 🌐 **Web & Application Development**
-- **Frontend**: React.js, HTML5, CSS3, JavaScript, TypeScript
-- **Backend**: Node.js, Flask, FastAPI
-- **Frameworks**: Streamlit (ML apps), Gradio
-
-### ☁️ **Cloud & Tools**
-- **Platforms**: AWS, Azure, Google Cloud Platform
-- **Big Data**: Apache Spark, Hadoop
-- **Development**: Git, GitHub, VS Code, Jupyter, Google Colab
-- **Databases**: PostgreSQL, MySQL, MongoDB
-
----
-
 ## 📬 Contact
 
 Interested in collaboration or career opportunities? Reach out via:
@@ -120,7 +88,6 @@ Interested in collaboration or career opportunities? Reach out via:
 - **Email:** [arunchinthalapally248@gmail.com](mailto:arunchinthalapally248@gmail.com)
 - **LinkedIn:** [linkedin.com/in/arun-chinthalapally](https://linkedin.com/in/arun-chinthalapally)
 - **GitHub:** [github.com/arun-248](https://github.com/arun-248)
-- **Portfolio:** [arun248-portfolio.vercel.app](https://arun248-portfolio.vercel.app)
 
 ---
 
