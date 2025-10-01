@@ -81,16 +81,6 @@
 
 ---
 
-## 📬 Contact
-
-Interested in collaboration or career opportunities? Reach out via:
-
-- **Email:** [arunchinthalapally248@gmail.com](mailto:arunchinthalapally248@gmail.com)
-- **LinkedIn:** [linkedin.com/in/arun-chinthalapally](https://linkedin.com/in/arun-chinthalapally)
-- **GitHub:** [github.com/arun-248](https://github.com/arun-248)
-
----
-
 ## 📄 License
 
 This portfolio is © 2025 Arun Chinthalapally. All rights reserved.
