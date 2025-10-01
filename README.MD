@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![React](https://img.shields.io/badge/React-18.0%2B-61DAFB?logo=react&logoColor=white&style=for-the-badge)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/Made%20with-React-61DAFB?logo=react&logoColor=white&style=for-the-badge)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0%2B-3178C6?logo=typescript&logoColor=white&style=for-the-badge)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0%2B-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&logoColor=white&style=for-the-badge)](https://vercel.com/)
@@ -80,6 +80,7 @@
 - **Vite** – Next-generation frontend tooling
 
 ---
+
 
 ## 📄 License
 
