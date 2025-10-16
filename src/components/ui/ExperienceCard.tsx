@@ -2,7 +2,7 @@ type ExperienceProps = {
   title: string;
   company: string;
   period: string;
-  description: string;
+  description: string[] | string; // allow both array and string
   skills: string[];
   certificate?: string;
 };
@@ -25,12 +25,23 @@ export function ExperienceCard({
       <p className="text-gray-600 dark:text-gray-300">{company}</p>
       <p className="text-sm text-gray-500">{period}</p>
 
-      <p className="mt-3 text-gray-700 dark:text-gray-200 whitespace-pre-line">
-        {description}
-      </p>
+      {/* Description as clean bullet points */}
+      <div className="mt-3 text-gray-700 dark:text-gray-200 space-y-2">
+        {Array.isArray(description) ? (
+          <ul className="list-disc list-inside space-y-1 marker:text-blue-500 dark:marker:text-blue-400">
+            {description.map((point, idx) => (
+              <li key={idx} className="leading-relaxed">
+                {point}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="whitespace-pre-line">{description}</p>
+        )}
+      </div>
 
       {/* Skills */}
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2">
         {skills.map((skill, idx) => (
           <span
             key={idx}
