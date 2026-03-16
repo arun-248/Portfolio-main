@@ -88,7 +88,6 @@
 html, body {
   overflow-x: hidden;
   width: 100%;
-  overscroll-behavior-y: none;
   -webkit-overflow-scrolling: touch;
 }
 

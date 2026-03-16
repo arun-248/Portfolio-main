@@ -7,16 +7,16 @@ import { ActionButtons } from './hero/ActionButtons';
 
 export function Hero() {
   const roles = [
-    "Aspiring Data Scientist",
-    "AI & Machine Learning Enthusiast",
-    "Data Analytics & Visualization",
-    "Autonomous Systems Developer",
+    "Aspiring AI/ML Engineer",
+    "AI-Powered Solutions Builder",
+    "Aspiring AI/ML Engineer",
+    "Generative AI & Intelligent Systems Developer",
   ];
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative [overflow:clip]"
     >
       {/* Animated background with particles */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950/60 dark:to-slate-950/60">

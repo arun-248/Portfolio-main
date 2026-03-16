@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function HandwritingAnimation({
-  name = "Hi, I'm Arun! Turning Data into Intelligent Solutions 🚀",
+  name = "Hi, I'm Arun! Building Intelligent Solutions with AI & ML 🚀",
   strokeWidth = 2,
   strokeColor = "#0ea5e9",
   fillColor = "#0ea5e9",
@@ -91,7 +91,7 @@ export function HandwritingAnimation({
           fontFamily="Inter, system-ui, sans-serif"
           fontWeight="700"
           style={{
-            fontSize: isMobile ? "100px" : "60px",
+            fontSize: isMobile ? "40px" : "56px",
             fill: "transparent",
             stroke: strokeColor,
             strokeWidth: strokeWidth,

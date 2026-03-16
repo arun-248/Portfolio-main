@@ -16,10 +16,10 @@ export function Contact() {
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Let's Connect</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-Interested in Data Science, AI, or Machine Learning? 🚀 Whether it’s collaborating on a project, sharing ideas, or exploring opportunities, I’d love to hear from you!
-I’m open to internships, full-time roles, and research collaborations. Let’s build something impactful together.
-Drop me a message—I’ll get back to you personally! 
-              </p>
+Passionate about Artificial Intelligence and Machine Learning? 🚀 If you're interested in collaborating on AI projects, building intelligent systems, or discussing innovative ideas, I'd love to connect.
+I'm open to internships, full-time roles, and research opportunities in AI/ML. Let’s work together to create impactful AI-driven solutions.
+Drop me a message — I’ll get back to you personally!
+</p>
 
 
               <div className="space-y-4">

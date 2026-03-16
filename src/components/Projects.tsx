@@ -24,7 +24,7 @@ import {
   SiJavascript,
   SiFastapi,
 } from 'react-icons/si';
-import { FaChartBar, FaProjectDiagram, FaRobot } from 'react-icons/fa';
+import { FaChartBar, FaProjectDiagram, FaRobot, FaEye } from 'react-icons/fa';
 
 // Define tech stack icons & colors
 const techStacks = {
@@ -57,9 +57,40 @@ const techStacks = {
 // Define projects
 const projects = [
   {
+    title: 'Image Intelligence Risk Analysis System',
+    description: `Built an AI-powered computer vision platform for automated scene understanding and risk detection using dual YOLOv8 deep learning models. Combined object detection, scene classification, and rule-based risk scoring to generate explainable safety insights. Designed an interactive analytical interface with visual outputs, similarity-based image comparison, and risk visualization dashboards. Integrated AI-generated investigation reports to support better awareness and decision-making.`,
+    image: '/assets/Image-Intelligence-Risk-Analysis-System.png',
+    link: 'https://visioniqbyarun.streamlit.app/',
+    github: 'https://github.com/arun-248/Image-Intelligence-Risk-Analysis-System',
+    techStack: [
+      techStacks.python,
+      { icon: FaEye, name: 'YOLOv8', color: '#FF6B35' },
+      
+      { icon: FaProjectDiagram, name: 'OpenCV', color: '#5C3317' },
+      { icon: FaEye, name: 'Computer Vision', color: '#00B4D8' },
+      techStacks.streamlit,
+      techStacks.pandas,
+    ],
+  },
+  {
+    title: 'JobFit Analyzer',
+    description: `Created an AI-powered job–candidate matching system that analyzes resumes and job descriptions using NLP and machine learning techniques. Implemented skill matching, semantic similarity analysis, experience evaluation, and learning potential scoring for transparent candidate assessment. Built a complete end-to-end application with FastAPI and Streamlit for resume analysis and intelligent recommendations. Enabled scalable candidate evaluation with clear and explainable recruiter insights.`,
+    image: '/assets/Job Fit Analyzer.png',
+    link: 'https://jobfitanalyzerbyarun.streamlit.app/',
+    github: 'https://github.com/arun-248/JOB-FIT-ANALYZER',
+    techStack: [
+      techStacks.python,
+      { icon: FaRobot, name: 'NLP', color: '#7C3AED' },
+      techStacks.scikit,
+      techStacks.fastapi,
+      techStacks.streamlit,
+      techStacks.pandas,
+    ],
+  },
+  {
     title: 'AI Study Buddy',
-    description: `Developed an advanced AI-powered intelligent study assistant using React, FastAPI, and Gemini API with multi-format document processing, AI-generated summaries, quizzes, flashcards, and a personalized adaptive study planner. Designed an intuitive, responsive, and visually engaging UI with TailwindCSS and integrated seamless AI-driven interactions for an immersive learning experience.`,
-    image: '/assets/Ai_Study_Buddy.jpg',
+    description: `Developed an AI-powered intelligent study assistant that processes multi-format documents to generate summaries, quizzes, flashcards, and personalized study plans. Integrated React, FastAPI, and Gemini API to enable real-time AI-powered learning features. Designed a responsive and visually engaging interface using TailwindCSS for a smooth user experience. Delivered an adaptive learning platform that improves student productivity through personalized study workflows and AI-assisted learning experiences.`,
+    image: '/assets/Ai_Buddy.png',
     link: 'https://aistudybuddybyarun.vercel.app/',
     github: 'https://github.com/arun-248/Ai-Study-Buddy.git',
     techStack: [
@@ -69,17 +100,12 @@ const projects = [
       techStacks.typescript,
       techStacks.python,
       techStacks.gpt,
-    
     ],
   },
   {
     title: 'Personalized Book Recommender',
-    description: `Built a collaborative filtering system to provide personalized book suggestions. 
-Analyzed user-book interactions using Python and Scikit-learn. 
-Engineered a system that processes large datasets efficiently. 
-Created a full-stack web app with Streamlit. 
-Focused on generating accurate and highly relevant recommendations.`,
-    image: '/assets/book.jpg',
+    description: `Built a collaborative filtering recommendation system to generate personalized book suggestions based on user reading preferences. Analyzed user–book interaction data using Python, Pandas, and Scikit-learn to identify meaningful recommendation patterns. Implemented an efficient pipeline capable of handling large-scale datasets for accurate recommendation generation. Created an interactive web application that delivers highly relevant and personalized book recommendations.`,
+    image: '/assets/book.png',
     link: 'https://arunpersonalizedbookrecommender.streamlit.app/',
     github: 'https://github.com/arun-248/Personalized-Book-Recommender.git',
     techStack: [
@@ -93,8 +119,8 @@ Focused on generating accurate and highly relevant recommendations.`,
   },
   {
     title: 'Lung Cancer Risk Analyzer',
-    description: `This ML-powered application predicts personalized lung cancer risk using an ensemble of Logistic Regression and Random Forest, achieving 94.2% accuracy with a 0.987 AUC-ROC. It provides real-time risk classification with confidence scoring through an interactive Streamlit dashboard.`,
-    image: '/assets/cancerimage.jpg',
+    description: `Created an ML-powered healthcare risk prediction system to estimate personalized lung cancer risk using clinical and lifestyle data. Implemented an ensemble model combining Logistic Regression and Random Forest, achieving 94.2% accuracy with a 0.987 AUC-ROC score. Performed data preprocessing, feature analysis, and model evaluation to ensure reliable predictions. Built an interactive Streamlit dashboard that provides real-time risk classification with confidence scoring.`,
+    image: '/assets/cancerimage.png',
     link: 'https://arun24-lung-cancer-analyzer.streamlit.app/',
     github: 'https://github.com/arun-248/lung-cancer-risk-analyzer.git',
     techStack: [
@@ -108,8 +134,8 @@ Focused on generating accurate and highly relevant recommendations.`,
   },
   {
     title: 'IPL Victory Probability Estimator',
-    description: `Developed a robust machine learning pipeline to forecast live IPL match win probabilities with high accuracy. Extracted and engineered predictive features from extensive historical and real-time in-game data. Trained and optimized a classification model for dynamic probability updates and implemented an interactive, user-friendly Streamlit web application for real-time match insights and detailed visual analytics.`,
-    image: '/assets/ipl.jpg',
+    description: `Developed a machine learning pipeline to estimate live IPL match win probabilities using historical and real-time match data. Engineered predictive features such as run rate, wickets remaining, and match context variables for improved model performance. Trained and optimized a classification model to provide dynamic probability updates during live matches. Implemented an interactive Streamlit application for real-time match insights and visual analytics for enhanced match analytics.`,
+    image: '/assets/ipl.png',
     link: 'https://iplwinpredictorbyarun.streamlit.app/',
     github: 'https://github.com/arun-248/ipl-win-probability-app.git',
     techStack: [
@@ -123,8 +149,8 @@ Focused on generating accurate and highly relevant recommendations.`,
   },
   {
     title: 'Agentic-RAG-Chatbot-MCP',
-    description: `Built an agent-based Retrieval-Augmented Generation (RAG) chatbot to answer contextual questions from diverse documents. Implemented a three-agent architecture (Ingestion, Retrieval, Response) and the MCP for structured communication. Used vector embeddings for efficient semantic retrieval and built a UI for upload, multi-turn Q&A, and detailed source context viewing.`,
-    image: '/assets/Agentic_RAG_Chatbot.jpg',
+    description: `Built an agent-based Retrieval-Augmented Generation (RAG) chatbot to answer contextual questions from diverse document sources. Implemented a three-agent architecture (Ingestion, Retrieval, Response) along with the MCP protocol for structured communication. Utilized vector embeddings and FAISS semantic search for efficient document retrieval and contextual response generation. Developed an interactive Streamlit interface supporting document upload, multi-turn Q&A, and transparent source context visualization.`,
+    image: '/assets/Agentic_RAG_Chatbot.png',
     link: 'https://arun24ragchatbot.streamlit.app/',
     github: 'https://github.com/arun-248/Agentic-RAG-Chatbot-MCP.git',
     techStack: [
@@ -138,8 +164,8 @@ Focused on generating accurate and highly relevant recommendations.`,
   },
   {
     title: 'Heart Disease Prediction',
-    description: `Developed a robust and scalable Logistic Regression model to accurately predict the presence of heart disease using key clinical, physiological, and demographic indicators. Conducted extensive data preprocessing, exploratory analysis, feature engineering, and model evaluation to ensure high accuracy, reliability, and interpretability. Showcases a complete, production-ready, and deployable end-to-end machine learning workflow tailored for critical, real-world healthcare applications.`,
-    image: '/assets/heart_2.jpg',
+    description: `Created a machine learning model using Logistic Regression to predict the likelihood of heart disease based on clinical and demographic health indicators. Performed data preprocessing, exploratory data analysis, and feature engineering to prepare reliable training data. Evaluated the model using standard performance metrics to ensure prediction accuracy and interpretability. Built an interactive Streamlit dashboard to demonstrate real-time predictions for healthcare decision support applications.`,
+    image: '/assets/heart.jpg',
     github: 'https://github.com/arun-248/Heart-Disease-Prediction.git',
     techStack: [
       techStacks.python,
@@ -150,21 +176,8 @@ Focused on generating accurate and highly relevant recommendations.`,
     ],
   },
   {
-    title: 'Stock Trend Analyzer',
-    description: `Built an advanced AI-powered analyzer for financial news using semantic search and intelligent information retrieval. Implemented efficient document chunking, vector embeddings, and FAISS similarity search for fast, accurate querying. Integrated a LLM for contextual Q&A, trend prediction, and actionable insights on complex financial data.`,
-    image: '/assets/stock.jpg',
-    github: 'https://github.com/arun-248/Stock-Trend-Analyzer',
-    techStack: [
-      techStacks.python,
-      techStacks.tensorflow,
-      techStacks.pytorch,
-      techStacks.jupyter,
-      techStacks.pandas,
-    ],
-  },
-  {
     title: 'GPT-Based Smart Assistant',
-    description: `Developed a voice-controlled assistant powered by OpenAI GPT. Recognizes voice commands and converts them into text. Processes queries with GPT to generate intelligent responses. Converts text back to speech for natural interaction. Automates tasks like opening Google or YouTube. Demonstrates integration of AI, NLP, and automation.`,
+    description: `Developed a voice-controlled AI assistant powered by OpenAI GPT for natural language interaction and task automation. Implemented speech recognition to convert voice commands into text for intelligent query processing. Integrated text-to-speech synthesis to generate natural spoken responses for seamless interaction. Enabled web automation tasks such as opening applications and websites through simple voice commands for efficient hands-free user productivity enhancement across everyday digital tasks and workflows and activities.`,
     image: '/assets/gpt.jpg',
     github: 'https://github.com/arun-248/GPT-Based-Smart-Assistant.git',
     techStack: [
@@ -176,19 +189,6 @@ Focused on generating accurate and highly relevant recommendations.`,
       { icon: SiJavascript, name: 'Web Automation', color: '#F7DF1E' },
     ],
   },
-  {
-    title: 'HR Analytics Dashboard',
-    description: `Developed a comprehensive and interactive HR Analytics Dashboard using Power BI to visualize workforce metrics and performance trends. Analyzed extensive employee data to identify key patterns in attrition, engagement, and recruitment efficiency. Enabled strategic, data-driven decision-making with clear, dynamic, and actionable insights for HR management.`,
-    image: '/assets/hr.jpg',
-    github: 'https://github.com/arun-248/HR-Analytics-Dashboard.git',
-    techStack: [
-      techStacks.powerbi,
-      techStacks.python,
-      techStacks.pandas,
-      techStacks.seaborn,
-      techStacks.jupyter,
-    ],
-  },
 ];
 
 export function Projects() {
@@ -196,7 +196,7 @@ export function Projects() {
     <SectionBackground>
       <section id="projects">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="Crafting code into solutions I’m proud of, from concept to creation">
+          <SectionTitle subtitle="Crafting code into solutions I'm proud of, from concept to creation">
             Projects
           </SectionTitle>
 
