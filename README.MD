@@ -1,4 +1,4 @@
-# 🚀 Arun Chinthalapally - Data Scientist & AI/ML Enthusiast
+# 🚀 Arun Chinthalapally - AI/ML Enthusiast
 
 <div align="center">
 
