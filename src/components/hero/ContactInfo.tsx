@@ -32,8 +32,8 @@ export function ContactInfo() {
       />
       <ContactItem
         icon={<Mail className="w-5 h-5" />}
-        text="arunchinthalapally248@gmail.com"
-        href="mailto:arunchinthalapally248@gmail.com"
+        text="arunchinthalapally@gmail.com"
+        href="mailto:arunchinthalapally@gmail.com"
       />
       <ContactItem
         icon={<MapPin className="w-5 h-5" />}

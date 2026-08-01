@@ -87,9 +87,9 @@ export function Skills() {
     <SectionBackground>
       <section id="skills">
         <div className="container mx-auto px-6">
-          <SectionTitle subtitle="Equipped with AI, ML, NLP, LLMs, and Data Science tools – transforming ideas into intelligent solutions 🤖📊">
-            Skills & Tools
-          </SectionTitle>
+          <SectionTitle subtitle="Combining cutting-edge AI technologies with modern development tools to build intelligent, impactful solutions 🧠🚀">
+  Skills & Tools
+</SectionTitle>
 
           <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4 sm:gap-6">
             {skills.map((tech) => (

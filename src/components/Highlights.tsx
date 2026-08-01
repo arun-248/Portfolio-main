@@ -84,15 +84,19 @@ export function Highlights() {
                   My LeetCode Journey
                 </h4>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  Every day I challenge myself on LeetCode to strengthen my
-                  problem-solving ability. I practice consistently, because I
-                  believe progress is built over time, not overnight. My focus
-                  spans across arrays, linked lists, trees, graphs, and dynamic
-                  programming — each problem helps me uncover new strategies and
-                  sharpen logical thinking. Some days I breeze through easy
-                  problems, while other days I wrestle with harder ones — but
-                  both experiences are valuable.
-                </p>
+  Consistency is the foundation of my growth as an engineer.
+  <br />
+  <br />
+  Every day I challenge myself on LeetCode to strengthen my problem-solving,
+  algorithmic thinking, and logical reasoning. I believe every challenge is an
+  opportunity to explore new approaches, refine my skills, and continuously
+  learn.
+  <br />
+  <br />
+  More than coding practice, LeetCode has become a daily habit that helps me
+  build the strong engineering foundation needed to develop efficient,
+  scalable, and intelligent AI-powered solutions.
+</p>
                 <div className="flex justify-center">
                   <a
                     href="https://leetcode.com/u/arun248/"
